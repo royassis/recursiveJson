@@ -1,0 +1,9 @@
+{
+  "firm_name": "a",
+  "firm_id": "1",
+  "firm_logo": ":)",
+  "stores": [
+    {"storename": "store1", "storeid": "1", "emps": [{"empname": "a", "empid": "1"},{"empname": "b", "empid": "2"}]},
+    {"storename": "store2", "storeid": "2", "emps": [{"empname": "c", "empid": "3"},{"empname": "d", "empid": "4"}]}
+  ]
+}
