@@ -34,26 +34,30 @@ def tranverse_nested_dict():
     """TODO: impliment"""
 
 
-def nested_dict_to_model_base(dict_list_all_frames, base_dict):
-
+def nested_dict_to_model_base(level_indc, dict_list_all_frames, base_dict):
     dictlist = get_dict_list(base_dict)
     plain_dict = get_flat_dict(base_dict)
 
-    if not dictlist:
-        return plain_dict
+    try:
+        dict_list_all_frames[level_indc]
+    except:
+        dict_list_all_frames.append([])
 
-    dict_list_one_frame = []
+    dict_list_all_frames[level_indc].append(plain_dict)
+
+    if not dictlist:
+        return
 
     for newdict in dictlist:
-        result = nested_dict_to_model_base(dict_list_all_frames, newdict)
-        dict_list_one_frame.append(result)
-
-    dict_list_all_frames.append(dict_list_one_frame)
+            nested_dict_to_model_base(level_indc+1,dict_list_all_frames, newdict)
 
     return dict_list_all_frames
 
 
+def nested_dict_to_model(nested_dict):
+        dfs=[]
+        multile_dicts = nested_dict_to_model_base(0, list(), nested_dict)
+        for flat_dict in multile_dicts:
+            dfs.append(pd.DataFrame(flat_dict))
 
-def nested_dict_to_model():
-    """TODO: impliment"""
-    pass
+        return dfs
