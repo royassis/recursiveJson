@@ -35,6 +35,7 @@ def tranverse_nested_dict():
 
 
 def nested_dict_to_model_base(level_indc, dict_list_all_frames, base_dict):
+    """TODO: Add foreign and primary keys to parents and children"""
     dictlist = get_dict_list(base_dict)
     plain_dict = get_flat_dict(base_dict)
 
