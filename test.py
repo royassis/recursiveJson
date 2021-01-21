@@ -7,6 +7,8 @@ with open("sample.json", "r") as fp:
 one_flat_df = unravel_nested_dict(data)
 print(one_flat_df)
 
+print()
+
 multiple_seperate_dfs = nested_dict_to_model(data)
 for df in multiple_seperate_dfs:
     print(df)

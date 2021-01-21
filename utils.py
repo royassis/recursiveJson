@@ -1,19 +1,19 @@
 import pandas as pd
 
 
-def get_flat_dict(d):
+def get_flat_part_from_dict(d):
     return {i: j for i, j in d.items() if type(j) != list}
 
 
-def get_dict_list(d):
+def get_recursive_part_from_dict(d):
     for key, val in d.items():
         if type(val) == list:
             return val
 
 
 def unravel_nested_dict_base(mylist, base_dict, added_dict):
-    dictlist = get_dict_list(base_dict)
-    plain_dict = get_flat_dict(base_dict)
+    dictlist = get_recursive_part_from_dict(base_dict)
+    plain_dict = get_flat_part_from_dict(base_dict)
 
     if not dictlist:
         mylist.append(plain_dict | added_dict)
@@ -34,31 +34,36 @@ def tranverse_nested_dict():
     """TODO: impliment"""
 
 
-def nested_dict_to_model_base(level_indc, dict_list_all_frames, base_dict):
-    """TODO: Add foreign and primary keys to parents and children"""
-    dictlist = get_dict_list(base_dict)
-    plain_dict = get_flat_dict(base_dict)
+def nested_dict_to_model_base(new_primary_key, parent_primary_key, level_idx, result_container, base_dict):
+
+    children_list = get_recursive_part_from_dict(base_dict)
+    this_object = get_flat_part_from_dict(base_dict)
+
+    this_object.update({"primary_key": new_primary_key})
+    this_object.update({"foreign_key": parent_primary_key})
 
     try:
-        dict_list_all_frames[level_indc]
+        result_container[level_idx]
     except:
-        dict_list_all_frames.append([])
+        result_container.append([])
 
-    dict_list_all_frames[level_indc].append(plain_dict)
+    result_container[level_idx].append(this_object)
 
-    if not dictlist:
+    if not children_list:
         return
 
-    for newdict in dictlist:
-            nested_dict_to_model_base(level_indc+1,dict_list_all_frames, newdict)
+    child_idx = 0
+    for child in children_list:
+            nested_dict_to_model_base(child_idx, new_primary_key, level_idx + 1, result_container, child)
+            child_idx = child_idx +1
 
-    return dict_list_all_frames
+    return result_container
 
 
 def nested_dict_to_model(nested_dict):
         dfs=[]
-        multile_dicts = nested_dict_to_model_base(0, list(), nested_dict)
-        for flat_dict in multile_dicts:
+        multiple_dicts = nested_dict_to_model_base(0, 0, 0, list(), nested_dict)
+        for flat_dict in multiple_dicts:
             dfs.append(pd.DataFrame(flat_dict))
 
         return dfs
