@@ -56,15 +56,15 @@ def nested_dict_to_model_base(parent_primary_key, level_idx, result_container, b
         return
 
     for child in node_children_list:
-            nested_dict_to_model_base(level_size, level_idx + 1, result_container, child)
+        nested_dict_to_model_base(level_size, level_idx + 1, result_container, child)
 
     return result_container
 
 
 def nested_dict_to_model(nested_dict):
-        dfs=[]
-        multiple_dicts = nested_dict_to_model_base(0, 0, list(), nested_dict)
-        for flat_dict in multiple_dicts:
-            dfs.append(pd.DataFrame(flat_dict))
+    dfs = []
+    multiple_dicts = nested_dict_to_model_base(0, 0, list(), nested_dict)
+    for flat_dict in multiple_dicts:
+        dfs.append(pd.DataFrame(flat_dict))
 
-        return dfs
+    return dfs
