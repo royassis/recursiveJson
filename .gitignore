@@ -1,1 +1,4 @@
-/*.pptx
+/resources/
+/build/
+/dist/
+/recursiveJson_roy_assis.egg-info/

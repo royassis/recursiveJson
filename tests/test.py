@@ -1,5 +1,5 @@
 import json
-from utils import unravel_nested_dict, nested_dict_to_model
+from recursiveJson.utils import unravel_nested_dict, nested_dict_to_model
 
 with open("sample.json", "r") as fp:
     data = json.load(fp)
