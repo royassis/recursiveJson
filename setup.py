@@ -21,4 +21,4 @@ setuptools.setup(
     python_requires='>=3.6',
 )
 
-# python3 setup.py sdist bdist_wheel
+# python setup.py sdist bdist_wheel
