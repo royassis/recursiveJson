@@ -2,25 +2,31 @@ import pandas as pd
 
 
 def get_data_part_from_dict(d):
-    return {i: j for i, j in d.items() if type(j) != list}
+    exlueder_parts = (list,dict)
+    return {key: val for key, val in d.items() if not type(val) in exlueder_parts}
 
-
-def get_recursive_part_from_dict(d):
+def get_dict_value_by_key_type(d, object_type):
     for key, val in d.items():
-        if type(val) == list:
+        if type(val) == object_type:
             return val
 
-
 def unravel_nested_dict_base(mylist, base_dict, added_dict):
-    dictlist = get_recursive_part_from_dict(base_dict)
+    dict_list = get_dict_value_by_key_type(base_dict, list)
+    nested_dict = get_dict_value_by_key_type(base_dict, dict)
     plain_dict = get_data_part_from_dict(base_dict)
 
-    if not dictlist:
+    if not dict_list and not nested_dict:
         mylist.append(plain_dict | added_dict)
         return
 
-    for newdict in dictlist:
-        unravel_nested_dict_base(mylist, newdict, plain_dict | added_dict)
+    if nested_dict:
+        unravel_nested_dict_base(mylist, nested_dict, added_dict | plain_dict)
+
+    if dict_list :
+        for newdict in dict_list:
+            unravel_nested_dict_base(mylist, newdict, added_dict | plain_dict)
+
+
 
     return mylist
 
@@ -37,7 +43,7 @@ def tranverse_nested_dict():
 def nested_dict_to_model_base(parent_primary_key, level_idx, result_container, base_dict):
     """TODO: think of a better implementation"""
 
-    node_children_list = get_recursive_part_from_dict(base_dict)
+    node_children_list = get_dict_value_by_key_type(base_dict, list)
     node_data = get_data_part_from_dict(base_dict)
 
     try:
