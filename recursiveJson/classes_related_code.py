@@ -1,4 +1,4 @@
-from utils import get_data_part_from_dict, get_recursive_part_from_dict
+from utils import get_flat_part_from_dict, get_dict_value_by_key_type
 
 class Node:
     def __init__(self, data):
@@ -16,8 +16,8 @@ class Graph:
         self.root = Node(data)
 
 def build_graph_from_nested_dict_base(prev_node, nested_dict):
-    dictlist = get_recursive_part_from_dict(nested_dict)
-    plain_dict = get_data_part_from_dict(nested_dict)
+    dictlist = get_dict_value_by_key_type(nested_dict)
+    plain_dict = get_flat_part_from_dict(nested_dict)
 
     current_node = Node(plain_dict)
     prev_node.add(current_node)

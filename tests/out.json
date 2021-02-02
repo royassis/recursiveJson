@@ -1,0 +1,368 @@
+{
+    "campaigns": {
+        "data": [
+            {
+                "name": "Psagot Kranot - brand awareness - 2000 - 24.01.21 - 28.01.21",
+                "status": "ACTIVE",
+                "insights": {
+                    "data": [
+                        {
+                            "conversions": [
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.TradeLead_newsite",
+                                    "value": "2"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.scrolling_65",
+                                    "value": "16"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.step0",
+                                    "value": "4"
+                                }
+                            ],
+                            "clicks": "480",
+                            "spend": "462.71",
+                            "cpc": "0.963979",
+                            "cost_per_conversion": [
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.TradeLead_newsite",
+                                    "value": "231.355"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.scrolling_65",
+                                    "value": "28.919375"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.step0",
+                                    "value": "115.6775"
+                                }
+                            ],
+                            "date_start": "2020-12-29",
+                            "date_stop": "2021-01-27"
+                        }
+                    ],
+                    "paging": {
+                        "cursors": {
+                            "before": "MAZDZD",
+                            "after": "MAZDZD"
+                        }
+                    }
+                },
+                "id": "6227502993847"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 21-23.1 (105.263$)",
+                "status": "PAUSED",
+                "id": "6227037618247"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 7-9.1 (105.263$)",
+                "status": "PAUSED",
+                "insights": {
+                    "data": [
+                        {
+                            "conversions": [
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.scrolling_65",
+                                    "value": "2"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.step0",
+                                    "value": "2"
+                                }
+                            ],
+                            "clicks": "359",
+                            "spend": "105.26",
+                            "cpc": "0.293203",
+                            "cost_per_conversion": [
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.scrolling_65",
+                                    "value": "52.63"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.step0",
+                                    "value": "52.63"
+                                }
+                            ],
+                            "date_start": "2020-12-29",
+                            "date_stop": "2021-01-27"
+                        }
+                    ],
+                    "paging": {
+                        "cursors": {
+                            "before": "MAZDZD",
+                            "after": "MAZDZD"
+                        }
+                    }
+                },
+                "id": "6224668300647"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 1-2.1 (105.263$)",
+                "status": "PAUSED",
+                "insights": {
+                    "data": [
+                        {
+                            "conversions": [
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.TradeLead_newsite",
+                                    "value": "1"
+                                }
+                            ],
+                            "clicks": "364",
+                            "spend": "105.26",
+                            "cpc": "0.289176",
+                            "cost_per_conversion": [
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.TradeLead_newsite",
+                                    "value": "105.26"
+                                }
+                            ],
+                            "date_start": "2020-12-29",
+                            "date_stop": "2021-01-27"
+                        }
+                    ],
+                    "paging": {
+                        "cursors": {
+                            "before": "MAZDZD",
+                            "after": "MAZDZD"
+                        }
+                    }
+                },
+                "id": "6223665510847"
+            },
+            {
+                "name": "Psagot Kranot - brand awareness - 2000 - 28.12.20 - 31.12.20",
+                "status": "PAUSED",
+                "insights": {
+                    "data": [
+                        {
+                            "clicks": "234",
+                            "spend": "404.17",
+                            "cpc": "1.727222",
+                            "date_start": "2020-12-29",
+                            "date_stop": "2021-01-27"
+                        }
+                    ],
+                    "paging": {
+                        "cursors": {
+                            "before": "MAZDZD",
+                            "after": "MAZDZD"
+                        }
+                    }
+                },
+                "id": "6223051899647"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 24-26.12 (105.263$)",
+                "status": "PAUSED",
+                "id": "6222793570447"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 17-19.12 (105.263$)",
+                "status": "PAUSED",
+                "id": "6221739347447"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 3-5.12 (105.263$) - Copy",
+                "status": "PAUSED",
+                "id": "6220661570647"
+            },
+            {
+                "name": "Psagot - Engagement - Globes Event - 2000 - 08/12/20 - 10/12/20",
+                "status": "PAUSED",
+                "id": "6220296440647"
+            },
+            {
+                "name": "Psagot Kranot - brand awareness - 2500 - 7.12.20 - 10.1220",
+                "status": "PAUSED",
+                "id": "6220161350447"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 3-5.12 (105.263$)",
+                "status": "PAUSED",
+                "id": "6219620003847"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 26-28.11 (105.263$)",
+                "status": "PAUSED",
+                "id": "6218550389047"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Quiz - 29.11",
+                "status": "PAUSED",
+                "id": "6218302711247"
+            },
+            {
+                "name": "Psagot Kranot - brand awareness - 2500 - 24.11.20 - 29.11.20",
+                "status": "PAUSED",
+                "id": "6218090949447"
+            },
+            {
+                "name": "Psagot Next Nov20 - Next - Facebook - Conversion - 65000 - 23/11/2020 - 13/12/2020",
+                "status": "PAUSED",
+                "id": "6217881985847"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 12-14.11 (105.263$)",
+                "status": "PAUSED",
+                "id": "6216411181647"
+            },
+            {
+                "name": "Psagot Kranot - brand awareness - 2500 - 8.11.20 - 9.11.20",
+                "status": "PAUSED",
+                "id": "6215839526047"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 05-07.11 (105.263$)",
+                "status": "PAUSED",
+                "id": "6215494548447"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist article - 3-4.11 (78.9$)",
+                "status": "PAUSED",
+                "id": "6215141931847"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 29-31.10 (105.263$)",
+                "status": "PAUSED",
+                "id": "6214619968847"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 23-24.10 (105.263$)",
+                "status": "PAUSED",
+                "id": "6213593754047"
+            },
+            {
+                "name": "Psagot trade AWO - Conversion - Data",
+                "status": "PAUSED",
+                "insights": {
+                    "data": [
+                        {
+                            "conversions": [
+                                {
+                                    "action_type": "donate_website",
+                                    "value": "1"
+                                },
+                                {
+                                    "action_type": "donate_total",
+                                    "value": "1"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.lead_info_center_next",
+                                    "value": "1"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.GemelLead_newsite",
+                                    "value": "2"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.scrolling_65",
+                                    "value": "56"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.step0",
+                                    "value": "27"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.Lead_PRO_InfoCenter",
+                                    "value": "12"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.step1",
+                                    "value": "9"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.step13",
+                                    "value": "3"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.TradeLead_newsite",
+                                    "value": "176"
+                                }
+                            ],
+                            "clicks": "2359",
+                            "spend": "4132.93",
+                            "cpc": "1.751984",
+                            "cost_per_conversion": [
+                                {
+                                    "action_type": "donate_website",
+                                    "value": "4132.93"
+                                },
+                                {
+                                    "action_type": "donate_total",
+                                    "value": "4132.93"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.lead_info_center_next",
+                                    "value": "4132.93"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.GemelLead_newsite",
+                                    "value": "2066.465"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.scrolling_65",
+                                    "value": "73.802321"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.step0",
+                                    "value": "153.071481"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.Lead_PRO_InfoCenter",
+                                    "value": "344.410833"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.step1",
+                                    "value": "459.214444"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.step13",
+                                    "value": "1377.643333"
+                                },
+                                {
+                                    "action_type": "offsite_conversion.fb_pixel_custom.TradeLead_newsite",
+                                    "value": "23.482557"
+                                }
+                            ],
+                            "date_start": "2020-12-29",
+                            "date_stop": "2021-01-27"
+                        }
+                    ],
+                    "paging": {
+                        "cursors": {
+                            "before": "MAZDZD",
+                            "after": "MAZDZD"
+                        }
+                    }
+                },
+                "id": "6213332589647"
+            },
+            {
+                "name": "Psagot Post Engagement - 19-21.10 - 52.631$N",
+                "status": "PAUSED",
+                "id": "6213073813847"
+            },
+            {
+                "name": "Psagot  -Calcalist Conference - Post Engagement - 19-21.10 - 52.631$N",
+                "status": "PAUSED",
+                "id": "6213073677047"
+            },
+            {
+                "name": "Psagot  - Post Traffic - Calcalist Podcast - 15-17.10 (105.263$)",
+                "status": "PAUSED",
+                "id": "6212592783047"
+            }
+        ],
+        "paging": {
+            "cursors": {
+                "before": "QVFIUkE1MGVyQXBud0RzdlktbkFtVEIzWkZAHcDBqUF9KRXJOdXRHeEtyYnNoZAnl5TzJJYjhNQS1iaWx1WkEyWHZAlanQzRnAtQ2llQVBITDhFTk1EOVhZAaW1B",
+                "after": "QVFIUml6N1RqTU9Va21ucC05T0RDd1hfbjY0anlRTnV6VDlDZA0E3WnFnTGdvS1dNQkNObXlBOGRKZAzN2S2JXUzk0TXA5Wkk2eHRUcFBEMnNleEdVUXRqMlh3"
+            },
+            "next": "https://graph.facebook.com/v9.0/act_10153854245208777/campaigns?access_token=EAAJ3n9RwwmMBALkZCBmaCrCNf84IZAqodxT4Hhk4eDWMByIwavDWrPmTnYeAXgFHTXxwhDemTFm7sG1y6zJwh6M1jFZCZAZAV48kanB3ex4rWaAEcXyqAYKG47I0EjYXoOEpXs7feBBbFxwx2FKsWdn01sZBHFek8OHazlAXyNMk165Ynh7B4pUKU1cKMYtn9E6XrRP3QTh9vFeUAMfZBJu25otGH7m5AGZBHLnINB55g2rb52ApjxhslsMhxPti6tYZD&fields=name%2Cstatus%2C+insights%7Bconversions%2Cclicks%2Cspend%2Ccpc%2Ccost_per_conversion%7D&limit=25&after=QVFIUml6N1RqTU9Va21ucC05T0RDd1hfbjY0anlRTnV6VDlDZA0E3WnFnTGdvS1dNQkNObXlBOGRKZAzN2S2JXUzk0TXA5Wkk2eHRUcFBEMnNleEdVUXRqMlh3"
+        }
+    },
+    "id": "act_10153854245208777"
+}
