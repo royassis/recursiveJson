@@ -6,26 +6,25 @@ def get_flat_part_from_dict(d):
     return {key: val for key, val in d.items() if not type(val) in exlueder_parts}
 
 
-def get_dict_value_by_key_type(d, object_type):
-    l = []
-    for key, val in d.items():
+def extract_dict_items_by_val_type(base_dict, object_type):
+    results = {}
+    for key, val in base_dict.items():
         if type(val) == object_type:
-            l.append(val)
-    if len(l) > 0:
-        return l
+            results[key]=val
+    return results
 
 
 def add_prefix_to_dict_keys(my_dict, prefix):
     new_dict = {}
     prefix = prefix.strip()
     len_prefix = len(prefix)
-    prefix = f"|{prefix}|"
+    prefix = f"{prefix}"
     for key, val in my_dict.items():
         keys = []
         if len_prefix:
             keys.append(prefix)
         keys.append(key)
-        new_key = "_".join(keys)
+        new_key = "__".join(keys)
         new_dict[new_key] = val
     return new_dict
 
@@ -39,31 +38,27 @@ def join_keys(sep="_", *args, **kwargs):
     return sep.join(key_list)
 
 
-def get_first_key_from_dict(new_dict):
-    return next(iter(new_dict))
-
-
 def unravel_nested_dict_base(mylist, base_dict, added_dict, parent_key):
-    dict_list_list = get_dict_value_by_key_type(base_dict, object_type=list)
-    nested_dict_list = get_dict_value_by_key_type(base_dict, object_type=dict)
+    dict_with_values_as_list_of_dicts = extract_dict_items_by_val_type(base_dict, object_type=list)
+    dict_with_values_as_dict = extract_dict_items_by_val_type(base_dict, object_type=dict)
     plain_dict = get_flat_part_from_dict(base_dict)
 
-    plain_dict = add_prefix_to_dict_keys(plain_dict, prefix=parent_key)
+    # plain_dict = add_prefix_to_dict_keys(plain_dict, prefix=parent_key)
 
-    if not dict_list_list and not nested_dict_list:
+    if not dict_with_values_as_list_of_dicts and not dict_with_values_as_dict:
         mylist.append(plain_dict | added_dict)
         return
 
-    if nested_dict_list:
-        for nested_dict in nested_dict_list:
-            key = get_first_key_from_dict(nested_dict)
+    if dict_with_values_as_dict:
+        for key, nested_dict in dict_with_values_as_dict.items():
+            nested_dict = add_prefix_to_dict_keys(nested_dict, prefix=key)
             unravel_nested_dict_base(mylist, nested_dict, added_dict | plain_dict, key)
 
-    if dict_list_list:
-        for dict_list in dict_list_list:
-            for newdict in dict_list:
-                key = get_first_key_from_dict(newdict)
-                unravel_nested_dict_base(mylist, newdict, added_dict | plain_dict, key)
+    if dict_with_values_as_list_of_dicts:
+        for key, list_of_dicts in dict_with_values_as_list_of_dicts.items():
+            for nested_dict in list_of_dicts:
+                nested_dict = add_prefix_to_dict_keys(nested_dict, prefix=key)
+                unravel_nested_dict_base(mylist, nested_dict, added_dict | plain_dict, key)
 
     return mylist
 
@@ -80,7 +75,7 @@ def tranverse_nested_dict():
 def nested_dict_to_model_base(parent_primary_key, level_idx, result_container, base_dict):
     """TODO: think of a better implementation"""
 
-    node_children_list = get_dict_value_by_key_type(base_dict, list)
+    dict_with_values_as_list_of_dicts = extract_dict_items_by_val_type(base_dict, list)
     node_data = get_flat_part_from_dict(base_dict)
 
     try:
@@ -95,11 +90,12 @@ def nested_dict_to_model_base(parent_primary_key, level_idx, result_container, b
     node_data.update({"primary_key": level_size})
     node_data.update({"foreign_key": parent_primary_key})
 
-    if not node_children_list:
+    if not dict_with_values_as_list_of_dicts:
         return
 
-    for child in node_children_list:
-        nested_dict_to_model_base(level_size, level_idx + 1, result_container, child)
+    for key, list_of_dicts in dict_with_values_as_list_of_dicts.items():
+        for nested_dict in list_of_dicts:
+            nested_dict_to_model_base(level_size, level_idx + 1, result_container, nested_dict)
 
     return result_container
 
