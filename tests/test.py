@@ -1,5 +1,5 @@
 import json
-from recursiveJson.utils import unravel_nested_dict
+from recursiveJson.utils import unravel_nested_dict, get_leaves, my_get_leaves
 from pathlib import Path
 import pandas as pd
 
@@ -13,6 +13,8 @@ p = r"C:\Users\Roy\PycharmProjects\recursiveJson\tests\out.json"
 
 with open(p, "r") as fp:
     data = json.load(fp)
+
+get_leaves(data,{}) == my_get_leaves({}, data)
 
 flat_df = unravel_nested_dict(data)
 print(flat_df)
